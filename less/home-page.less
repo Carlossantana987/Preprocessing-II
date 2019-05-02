@@ -1,23 +1,19 @@
 .home {
 
-  .header-nav{
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
+  .welcome-to-fun-bus{
+    width:100%;
+    border-bottom:2px dashed @navigation-border;
+  
+    .fun-bus-content{
       padding:3% 0%;
-
-      nav{
-        font-size:20%;
-        width:40%;
+      
+      @media @mobile{
+        width:100%;
+        padding:20px 5px 0px 5px;
       }
-
-      a{
-        font-size:12px;
-        padding: 0% 6%;
-      }
+    
+    }
   }
-
-
 
 
   .content-section {
@@ -26,20 +22,29 @@
     flex-wrap: wrap;
     justify-content: space-between;
     
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width:100%;
+        padding:0px 10px;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      
+      @media @mobile{
+        width:100%;
+        padding:0px 10px;
+      }
+      
       img {
         border-radius: 10px;
       }
     }
+    
   }
 
   .inverse-content {
@@ -49,11 +54,24 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      
+      
+      @media @mobile{
+        width:100%;
+        padding:10px 10px 0px 10px ;
+      }
+    
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+    
+      @media @mobile{
+        width:100%;
+        padding:0px 10px;
+      }
+    
     }
   }
 
@@ -64,21 +82,44 @@
     img {
       border-radius: 10px;
     }
+
+    @media @mobile{
+      width:100%;
+      padding:0% 2%;
+    }
   }
 
-  .content-pick {
+  .content-pick{
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
 
+    @media @mobile{
+      display:flex;
+      flex-direction: column;
+    }
+    
     .destination {
-      border:1px solid red;
       width: 30%;
       margin-bottom: 30px;
-    
+
+      @media @mobile{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        padding:0px 50px;
+  
+      }
+
+
+
       .btn{
         .button();
       }
     }
+    
   }
+
+}//home
+
